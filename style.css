@@ -4,12 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 5fr;
   height: 100vh;
 }
 
@@ -53,11 +54,89 @@ body {
 }
 
 header {
-  background: white;
   grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 1.5rem;
+  margin: 1rem 2rem;
+  background: white;
+}
+
+.search {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search > .search-bar {
+  appearance: none;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5em 0.5em;
+  flex: 1;
+}
+
+.account-nav {
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.profile-pic {
+  border-radius: 100%;
+}
+
+.nav-profile-pic {
+  width: 2.5em;
+  height: 2.5em;
 }
 
 .content {
   background: gray;
-  grid-area: 2 / 2 / 3 / 3;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+}
+
+.greeting > .text {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.greet-profile-pic {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 4em;
+  height: 4em;
+}
+
+.greeting-text > .greet-user-name {
+  font-size: 2rem;
+}
+
+.file-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  appearance: none;
+  background: #1992d4;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 0.5em 2em;
+  height: 3rem;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
