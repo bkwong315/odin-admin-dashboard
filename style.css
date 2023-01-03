@@ -138,6 +138,10 @@ header {
   font-size: 1.25rem;
 }
 
+.btn:hover {
+  background: #1eaefc;
+}
+
 .main-content {
   box-sizing: border-box;
   display: grid;
